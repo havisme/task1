@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Rectangle fx:id="wh" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="32.0" onMouseClicked="#Col1" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                        <Rectangle fx:id="gr" arcHeight="5.0" arcWidth="5.0" fill="#59cc4b" height="32.0" onMouseClicked="#Col2" stroke="BLACK" strokeType="INSIDE" width="49.0" GridPane.columnIndex="1" />
+                        <Rectangle fx:id="bl" arcHeight="5.0" arcWidth="5.0" fill="#73bbff" height="32.0" onMouseClicked="#Col3" stroke="BLACK" strokeType="INSIDE" width="47.0" GridPane.rowIndex="1" />
+                        <Rectangle fx:id="red" arcHeight="5.0" arcWidth="5.0" fill="#fc5959" height="32.0" onMouseClicked="#Col4" stroke="BLACK" strokeType="INSIDE" width="49.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+                <VBox prefHeight="9.0" prefWidth="100.0" />
+                <ColorPicker fx:id="color" prefHeight="29.0" prefWidth="100.0" />
+            </children>
+        </VBox>
+        <VBox prefHeight="400.0" prefWidth="501.0">
+            <children>
+                <Pane prefHeight="457.0" prefWidth="501.0">
+                    <children>
+                        <Canvas fx:id="canvas" height="329.0" layoutX="1.0" width="513.0" />
+                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="245.0" layoutX="196.0" layoutY="45.0" onMouseClicked="#rect" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="124.0" />
+                        <Circle fx:id="pol6" fill="WHITE" layoutX="230.0" layoutY="255.0" onMouseClicked="#pol6" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol7" fill="WHITE" layoutX="288.0" layoutY="255.0" onMouseClicked="#pol7" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol4" fill="WHITE" layoutX="230.0" layoutY="194.0" onMouseClicked="#pol4" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol5" fill="WHITE" layoutX="288.0" layoutY="194.0" onMouseClicked="#pol5" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol3" fill="WHITE" layoutX="288.0" layoutY="133.0" onMouseClicked="#pol3" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol2" fill="WHITE" layoutX="230.0" layoutY="133.0" onMouseClicked="#pol2" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol" fill="WHITE" layoutX="230.0" layoutY="78.0" onMouseClicked="#pol" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="pol1" fill="WHITE" layoutX="288.0" layoutY="78.0" onMouseClicked="#pol1" opacity="0.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                    </children>
+                </Pane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <Button fx:id="btn1" mnemonicParsing="false" onAction="#btn1" text="Нарисовать кирпич" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            </children>
+        </VBox>
+    </children>
+</HBox>
